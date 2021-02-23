@@ -5,6 +5,7 @@ https://cdn.jsdelivr.net/gh/YMuLing/drive_file@master/icon/home4.webp
 https://cdn.jsdelivr.net/gh/YMuLing/drive_file@master/icon/home5.webp
 
 https://cdn.jsdelivr.net/gh/YMuLing/drive_file@master/icon/drive_bg.png
+https://cdn.jsdelivr.net/gh/YMuLing/drive_file@master/icon/mine_bg@3x.png
 
 
 
