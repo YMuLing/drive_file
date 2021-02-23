@@ -1,11 +1,12 @@
 https://cdn.jsdelivr.net/gh/YMuLing/drive_file@master/icon/home1.webp
-https://cdn.jsdelivr.net/gh/YMuLing/drive_file@master/icon/home2.webp
-https://cdn.jsdelivr.net/gh/YMuLing/drive_file@master/icon/home3.webp
-https://cdn.jsdelivr.net/gh/YMuLing/drive_file@master/icon/home4.webp
-https://cdn.jsdelivr.net/gh/YMuLing/drive_file@master/icon/home5.webp
+../../static/icons/home2.webp
+../../static/icons/home3.webp
+../../static/icons/home4.webp
+../../static/icons/home5.webp
 
-https://cdn.jsdelivr.net/gh/YMuLing/drive_file@master/icon/drive_bg.png
-https://cdn.jsdelivr.net/gh/YMuLing/drive_file@master/icon/mine_bg@3x.png
+../../static/icons/drive_bg.png
+../../static/icons/mine_bg@3x.png
+
 
 
 
