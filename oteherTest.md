@@ -470,7 +470,9 @@ const vm = new Vue({
     },
 ```
 
-### 使用公共数据 04
+
+
+### 使用公共数据04
 
 1. 全局安装项目所需的 vue-cli  `npm install -g @vue/cli`
 
@@ -509,7 +511,7 @@ const vm = new Vue({
 
 
 
-### 安装工具06
+### 安装工具05
 
 打开Terminal，输入vi ./.bash_profile,回车，打开./.bash_profile文件：回车
 
@@ -542,7 +544,7 @@ brew services restart mysql
 
 2.下载数据库可视化界面 sequel pro ，通过数据库目录下的配置文件中的 default.json 文件中的 “db_config”中的
 
-### 一些问题07
+### 一些问题06
 
 l挂载点**：通过el获取元素，来将 data 中的数据对象信息添加到指定元素中
 
