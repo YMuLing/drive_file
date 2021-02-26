@@ -1,8 +1,6 @@
+# 用于测试的md文档
 
-
-# **vue项目构建和element-ui基本使用**
-
-### 基础部分
+### 基础部分01
 
 **安装 vue脚手架(作用，快速生成项目基础架构)：**npm install -g @vue/cli
 
@@ -171,7 +169,7 @@ Vue.use(elementui) //安装到vue
 
 **vue Router vue官方的路由管理器**：详情见vue框架学习的 day02
 
-### 其他记录
+### 其他记录02
 
 **通过 babel 体验es6模块化、安装 babel 依赖包：**
 npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/node
@@ -197,7 +195,7 @@ module.exports = { presets };
 
 
 
-### 功能使用
+### 功能使用03
 
 **创建好功能并做好出口：**做好出口，并从 index.js 中引入，npx babel-node 输出文件，在一个文件中，只能有有一次默认出口，但却可以有 n 次的按需出口
 
@@ -471,3 +469,128 @@ const vm = new Vue({
         "build": "webpack -p"
     },
 ```
+
+### 使用公共数据 04
+
+1. 全局安装项目所需的 vue-cli  `npm install -g @vue/cli`
+
+2. 创建 uni app 项目 `vue create -p dcloudio/uni-preset-vue my-project`
+
+3. 文件生成完毕之后，可通过 `npm run dev:mp-weixin`执行打包，在微信开发者工具通过打开打包完成的文件进行预览小程序
+
+4. 完成了以上基本步骤就可以开始快乐的敲代码了，注意要用小程序语法进行开发
+
+```javascript
+// 在 index.js 入口文件中的配置
+import Vue from 'vue'
+
+// 导入单文件组件 //html 只设置一个挂载点，具体内容在单组件中完成
+import App from './components/App.vue'
+
+const vm = new Vue({
+    el: '#app',
+    render: h => h(App)
+})
+```
+
+打开Terminal，输入vi ./.bash_profile,回车，打开./.bash_profile文件：回车
+
+现在已经打开了./.bash_profile文件，但是还处于查看模式，不能编辑。输入“i”，进入insert模式
+
+这时就可以添加环境变量了，例如：
+
+编辑完成，点击“esc键，退出insert模式”, 然后输入“:wq!”,回车，保存成功。 
+
+1. 输入“source ./.bash_profile”，让环境变量生效。
+2. 输入”echo $PATH”,查看环境变量，发现添加成功。 
+3. 重新打开终端，环境变量就会生效了。
+
+通过软件 sequel 链接到本地数据库，用户名搞对，就可以正确链接
+
+
+
+### 安装工具06
+
+打开Terminal，输入vi ./.bash_profile,回车，打开./.bash_profile文件：回车
+
+现在已经打开了./.bash_profile文件，但是还处于查看模式，不能编辑。输入“i”，进入insert模式
+
+这时就可以添加环境变量了，例如：
+
+编辑完成，点击“esc键，退出insert模式”, 然后输入“:wq!”,回车，保存成功。 
+
+1. 输入“source ./.bash_profile”，让环境变量生效。
+2. 输入”echo $PATH”,查看环境变量，发现添加成功。 
+3. 重新打开终端，环境变量就会生效了。
+
+通过软件 sequel 链接到本地数据库，用户名搞对，就可以正确链接
+
+**记录将本地服务器启动的办法：**
+
+**1.**安装好 mysql
+
+```
+#安装mysql
+brew install mysql
+#启动mysql
+brew services start mysql@5.7
+# 关闭 mysql
+brew services stop mysql
+# 重启 mysql
+brew services restart mysql
+```
+
+2.下载数据库可视化界面 sequel pro ，通过数据库目录下的配置文件中的 default.json 文件中的 “db_config”中的
+
+### 一些问题07
+
+l挂载点**：通过el获取元素，来将 data 中的数据对象信息添加到指定元素中
+
+**data简单数据类型：**可以直接通过 {{message}} 的方式调用数据
+
+**data复杂数据类型：**对象可以直接通过 ele. 的方式选取，数组可以直接通过 ele[0] 的方式选取
+
+代码示例：
+
+
+```html
+<body>
+    <div id="app">
+        {{message}}
+        <h2>
+            {{school.mobile}}
+        </h2>
+        <h4>
+            {{campus[0]}}
+        </h4>
+    </div>
+
+
+    <!-- 引入vue -->
+    <script src="js/vue.js"></script>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                message: '我是迪迦',
+                school: {
+                    name: '黑马程序员',
+                    mobile: '400-618-9090',
+                },
+                campus: ['迪迦', '高斯', '阿古茹']
+            }
+        })
+    </script>
+</body>
+```
+
+
+**vue指令：**v- 开头的特殊语法
+
+**v-text：**通过自定义属性的方式在标签中引入 data 数据中的属性内容，这种方式引入的值，在标签再写内容会无，如果只是替换部分内容，可以用 {{message}} 这种方式，不会覆盖原内容
+
+**v-html：**使用场景，需要将 html 结构加入到页面中，就是innerHtml，就使用该方式，如果只是文本，则使用 v-text
+
+**v-on：**为元素绑定事件，以下是
+
+代码示例：
